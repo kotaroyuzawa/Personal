@@ -19,7 +19,7 @@ materialToggles.forEach((materialToggle) => {
 });
 
 //toggle
-const toggles = document.querySelectorAll(".faq-toggle");
+const toggles = document.querySelectorAll(".faq__toggle");
 
 toggles.forEach((toggle) => {
   toggle.addEventListener("click", () => {

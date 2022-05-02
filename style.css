@@ -23,6 +23,7 @@ a {
   position: sticky;
   top: 0;
   width: 100%;
+  z-index: 1;
 }
 
 .nav-container {
@@ -345,44 +346,58 @@ a {
 }
 
 /*///////////////FAQ toggle///////////////*/
-.fag-page-container {
-  padding: 0 10%;
-}
-.faq-container {
-  max-width: 800px;
-  margin: 0 auto;
-}
 
 .faq {
-  background-color: transparent;
-  border: 1px solid #9fa4a8;
+  max-width: 800px;
+  margin: auto;
+  padding-bottom: 200px;
+}
+
+.faq__section h4 {
+  text-align: center;
+}
+
+.faq__category {
+  margin-top: 50px;
+}
+
+.faq__container {
+  border-top: 1px solid #dce2e6;
+  border-bottom: 1px solid #dce2e6;
   border-radius: 10px;
-  margin: 20px 0;
-  padding: 30px;
+  margin: 15px 0;
+  padding: 15px 30px;
   position: relative;
   overflow: hidden;
-  transition: 1.3s ease;
 }
 
-.faq.active {
+.faq__container:active {
   background-color: #fff;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
 }
 
-.faq-title {
+.faq__title {
   margin: 0 35px 0 0;
+  font-weight: bold;
 }
 
-.faq-text {
+.faq__text {
   display: none;
-  margin: 30px 0 0;
+  margin: 25px 0 0;
+}
+.faq__text a {
+  color: inherit;
+  text-decoration: none;
+}
+.faq__text a:hover {
+  color: inherit;
+  opacity: 0.6;
 }
 
-.faq.active .faq-text {
+.faq__container.active .faq__text {
   display: block;
 }
 
-.faq-toggle {
+.faq__toggle {
   background-color: transparent;
   border: 0;
   border-radius: 50%;
@@ -393,31 +408,40 @@ a {
   font-size: 16px;
   padding: 0;
   position: absolute;
-  top: 30px;
+  top: 10px;
   right: 30px;
   height: 30px;
   width: 30px;
+  transition: 0.3s;
 }
 
-.faq-toggle:focus {
+.faq__toggle:focus {
   outline: 0;
 }
 
-.faq-toggle .fa-times {
+.faq__toggle .fa-times {
   display: none;
 }
 
-.faq.active .faq-toggle .fa-times {
+.faq__container.active .faq__toggle .fa-times {
   color: #fff;
   display: block;
 }
 
-.faq.active .faq-toggle .fa-chevron-down {
+.faq__container.active .faq__toggle .fa-chevron-down {
   display: none;
 }
 
-.faq.active .faq-toggle {
+.faq__container.active .faq__toggle {
   background-color: #9fa4a8;
+}
+
+@media only screen and (max-width: 560px) {
+  .faq {
+    max-width: 800px;
+    margin: auto;
+    padding-bottom: 50px;
+  }
 }
 
 /*footer*/
