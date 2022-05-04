@@ -5,6 +5,7 @@
   margin: 0;
   padding: 0;
   font-family: "DM Sans", "sans-serif";
+  color: #223c50;
 }
 html {
   box-sizing: border-box;
@@ -27,7 +28,7 @@ a {
 }
 
 .nav-container {
-  padding: 30px 0 30px 0;
+  padding: 20px 0;
   width: 100%;
   background-color: #fff;
   border-bottom: solid 1px rgba(0, 0, 0, 0.1);
@@ -55,8 +56,8 @@ a {
   text-decoration: none;
 }
 
-.header h3 {
-  margin-top: 100px;
+.page-title {
+  margin-top: 50px;
   margin-left: 10%;
   padding: 30px;
   font-size: 24px;
@@ -80,7 +81,7 @@ a {
     font-size: 16px !important;
     text-decoration: none;
   }
-  .header h3 {
+  .page-title {
     margin-top: 10px;
     margin-left: 5%;
     font-size: 18px;
@@ -89,17 +90,19 @@ a {
 
 .about__content p,
 .quer__text p {
-  font-size: 22px;
+  font-size: 18px;
+  line-height: 35px;
 }
 
 /*home*/
 
 .hero {
-  background-image: url("img/saz.jpg");
+  background-image: url("img/saz4.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: bottom center;
   height: 100vh;
+  width: 100vw;
   color: #fff;
   display: flex;
   justify-content: center;
@@ -115,37 +118,33 @@ a {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   background-color: rgba(0, 0, 0, 0.6);
   z-index: -1;
 }
 
 .hero-description {
-  position: absolute;
-  top: 50%;
-  left: 25%;
+  text-align: center;
   color: #fff;
   z-index: 100;
 }
 
 .hero-title {
   font-size: 4rem;
-
   color: #fff;
 }
 
 .hero-title2 {
   font-size: 3rem;
-
   color: #fff;
 }
 
 .about__container {
   display: flex;
   flex-direction: row;
-  padding: 10%;
-  margin-top: 100px;
+  padding: 0 10%;
+  margin-top: 200px;
 }
 
 .about__picture img {
@@ -157,6 +156,42 @@ a {
   margin: 30px 10%;
 }
 
+@media only screen and (max-width: 800px) {
+  .about__container {
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    margin-top: 50px;
+  }
+  .about__picture img {
+    display: flex;
+    margin: auto;
+    max-width: 250px;
+    height: auto;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about__picture img {
+    display: flex;
+    margin: auto;
+    max-width: 150px;
+    height: auto;
+  }
+}
+.zuQuereinstieg {
+  font-weight: bolder;
+  font-style: italic;
+}
+.zuQuereinstieg a {
+  color: #333;
+  opacity: 0.6;
+}
+.zuQuereinstieg a:hover {
+  text-decoration: none;
+  color: #333;
+  opacity: 0.3;
+}
 /*Quereinstieg*/
 .quer {
   padding: 0 10%;
@@ -169,7 +204,7 @@ a {
 
 .overview__title {
   font-size: 48px;
-  padding: 150px 10%;
+  padding: 70px 10%;
   text-transform: uppercase;
 }
 
@@ -202,13 +237,16 @@ a {
 
   .overview__title {
     font-size: 28px;
-    padding: 50px 0;
+    padding: 50px 5%;
     text-transform: uppercase;
   }
 
   .section-img img {
     max-width: 100%;
     height: auto;
+  }
+  .quer__text {
+    padding: 10px 5% 50px;
   }
 }
 
@@ -311,7 +349,7 @@ a {
 }
 
 @media only screen and (max-width: 880px) {
-  .lernmaterialien-container {
+  .lernmaterialien {
     padding: 0 5%;
   }
   .material-overview {
@@ -324,6 +362,10 @@ a {
   }
   .sonstige-container {
     padding: 0 5% 50px;
+  }
+
+  .material-toggle {
+    padding: 5px 5%;
   }
 }
 
@@ -350,7 +392,8 @@ a {
 .faq {
   max-width: 800px;
   margin: auto;
-  padding-bottom: 200px;
+  padding-bottom: 100px;
+  padding: 0 10px;
 }
 
 .faq__section h4 {
@@ -458,7 +501,7 @@ a {
   background-color: #1e2333;
 }
 
-.footer__container h3 {
+.footer__container h5 {
   text-align: center;
   color: #fff;
   padding: 70px 10% 30px;
@@ -467,8 +510,17 @@ a {
 .footer__container .kontakt-btn {
   border: none;
   font-size: 20px;
-  border-radius: 20px;
-  padding: 10px 20px;
+  border-radius: 15px;
+  padding: 8px 20px;
+  transition: 0.3s;
+  background-color: #bc8c22;
+}
+.footer__container .kontakt-btn:hover {
+  filter: brightness(130%);
+  transform: scale(1.05);
+}
+
+.footer__container .kontakt-btn:active {
 }
 
 .footer__container .copyright {
@@ -479,7 +531,7 @@ a {
 }
 
 @media only screen and(max-width: 824px) {
-  .footer__container h3 {
+  .footer__container h5 {
     text-align: center;
     color: #fff;
     padding: 70px 10% 10px;
@@ -487,7 +539,7 @@ a {
 }
 
 @media only screen and(max-width: 424px) {
-  .footer__container h3 {
+  .footer__container h5 {
     text-align: center;
     color: #fff;
     padding: 70px 10% 0px;
