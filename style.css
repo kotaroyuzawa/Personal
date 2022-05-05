@@ -393,8 +393,7 @@ a {
 .faq {
   max-width: 800px;
   margin: auto;
-  padding-bottom: 100px;
-  padding: 0 10px;
+  padding: 0 10px 100px 10px;
 }
 
 .faq__section h4 {
