@@ -429,7 +429,6 @@ a {
 }
 .faq__text a {
   color: inherit;
-  text-decoration: none;
 }
 .faq__text a:hover {
   color: inherit;
