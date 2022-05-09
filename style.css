@@ -1,14 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans&family=Roboto:wght@400;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Oswald&display=swap");
 * {
-  box-sizing: inherit;
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
   font-family: "DM Sans", "sans-serif";
   color: #223c50;
 }
-html {
-  box-sizing: border-box;
+html,
+body {
+  overflow-x: hidden;
 }
 
 a {
@@ -579,7 +580,7 @@ a {
     display: flex;
     flex-direction: row;
     align-items: center;
-    padding: 5px 25%;
+    padding: 5px 0 5px 20%;
   }
 
   .mapouter {
@@ -587,7 +588,7 @@ a {
   }
   .contact__name {
     margin-top: 50px;
-    padding: 0;
+    padding: 0 0 0 30%;
     white-space: nowrap;
   }
 
@@ -619,9 +620,15 @@ a {
     padding: 0;
   }
   .contact__name {
-    margin-top: 50px;
-    padding: 0;
+    margin-top: 50px 10;
+    padding: 0 20%;
     white-space: nowrap;
+  }
+  .contact__component {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px 0 0 10%;
   }
 }
 
