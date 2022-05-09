@@ -7,9 +7,11 @@
   font-family: "DM Sans", "sans-serif";
   color: #223c50;
 }
-html,
-body {
-  overflow-x: hidden;
+html {
+}
+body,
+html {
+  height: 100%;
 }
 
 a {
@@ -39,6 +41,7 @@ a {
   flex-wrap: wrap;
   margin: 0;
 }
+
 .nav-container a {
   text-transform: uppercase;
   color: #333;
@@ -93,50 +96,57 @@ a {
   line-height: 35px;
 }
 
-/*home*/
-
-.hero {
-  background-image: url("img/saz4.jpg");
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("img/saz2.jpg");
+  height: 95%;
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: bottom center;
-  height: 100vh;
-  width: 100vw;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
   position: relative;
-  margin-bottom: 20px;
-  z-index: -2;
 }
 
-.hero::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
-  z-index: -1;
-}
-
-.hero-description {
+.hero-title h1 {
   text-align: center;
-  color: #fff;
-  z-index: 100;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
 
-.hero-title {
-  font-size: 4rem;
-  color: #fff;
+@media screen and (max-width: 1000px) {
+  .hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("img/saz2.jpg");
+
+    /* Set a specific height */
+    height: 60%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
 }
 
-.hero-title2 {
-  font-size: 3rem;
-  color: #fff;
+@media screen and (max-width: 600px) {
+  .hero-image {
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+      url("img/saz2.jpg");
+
+    /* Set a specific height */
+    height: 40%;
+
+    /* Position and center the image to scale nicely on all screens */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
 }
 
 .about__container {
@@ -161,10 +171,11 @@ a {
     padding: 5%;
     margin-top: 50px;
   }
-  .about__picture img {
-    margin: auto;
-    max-width: 250px;
+  .about__container img {
+    float: left;
+    max-width: 20%;
     height: auto;
+    margin: 5% 5% 2% 5%;
   }
 }
 
@@ -176,7 +187,7 @@ a {
 
   .about__container img {
     margin: auto;
-    max-width: 45%;
+    max-width: 40%;
     height: auto;
   }
   .about__container p {
