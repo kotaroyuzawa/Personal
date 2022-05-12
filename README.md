@@ -6,6 +6,5 @@ I implemented following themes and functionalities:
 - Fixed nav bar
 - Hero page
 - Bootstrap for collapse
-- Javascript for toggle
-- Icons from Font Awesome
+- collapse and toggle with JavaScript
 - Form page
