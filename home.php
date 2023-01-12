@@ -19,16 +19,7 @@
     <title>Kotaro Yuzawa | About</title>
   </head>
   <body>
-    <nav id="nav" class="nav">
-      <div class="nav-container">
-        <ul>
-          <li><a href="#" style="opacity: 1;">About</a></li>
-          <li><a href="quereinstieg.html">Quereinstieg</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+    <?php include 'nav.php'; ?>
 
     <section class="hero-image">
       <div class="hero-title">
