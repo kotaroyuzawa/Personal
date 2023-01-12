@@ -19,16 +19,7 @@
     <title>Kotaro Yuzawa | About</title>
   </head>
   <body>
-    <nav id="nav" class="nav">
-      <div class="nav-container">
-        <ul>
-          <li><a href="index.html">About</a></li>
-          <li><a href="quereinstieg.html">Quereinstieg</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="#" style="opacity: 1;">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+    <?php include 'nav.php'; ?>
     <div class="contact">
       <div class="contact__info">
         <h6 class="contact__name">Kotaro Yuzawa</h6>
