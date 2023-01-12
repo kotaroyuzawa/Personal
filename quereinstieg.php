@@ -13,16 +13,7 @@
     <title>Kotaro Yuzawa | Quereinstieg</title>
   </head>
   <body>
-    <nav id="nav" class="nav">
-      <div class="nav-container">
-        <ul>
-          <li><a href="index.html">About</a></li>
-          <li><a href="#" style="opacity: 1;">Quereinstieg</a></li>
-          <li><a href="faq.html">FAQ</a></li>
-          <li><a href="contact.html">Contact</a></li>
-        </ul>
-      </div>
-    </nav>
+   <?php include 'nav.php'; ?>
     <header class="header">
       <h3 class="page-title">Quereinstieg</h3>
     </header>
